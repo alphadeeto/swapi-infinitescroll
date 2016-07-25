@@ -1,0 +1,68 @@
+
+@font-face {
+    src:url("../fonts/opensans.woff");
+    font-family:"opensans";
+}
+@font-face {
+    src:url("../fonts/opensansextrabold.woff");
+    font-family:"opensansextrabold";
+}
+@font-face {
+    src:url("../fonts/opensansbold.woff");
+    font-family:"opensansbold";
+}
+@font-face {
+    src:url("../fonts/opensanslight.woff");
+    font-family:"opensanslight";
+}
+
+* {box-sizing: border-box; transition:all 0.25s; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+html, body {padding:0px; margin:0px; font-size:14px !important; font-family:"opensanslight", arial, serif !important; overflow:hidden;}
+
+a {text-decoration:none; color:inherit;}
+input {font-family:"opensans", arial, serif; font-size:inherit;}
+ul {margin:inherit; padding:inherit;}
+
+header {position:absolute; width:100%; background:#111111; color:#DDDDDD; text-align:center; padding-top:10px; z-index:100;}
+header .logo {height:75px; background-image:url("./img/logo.png"); background-size:contain; background-repeat:no-repeat; background-position:center;}
+header p {font-size:1em; margin:0px 0px 20px;}
+
+.loader {background-image:url("./img/loader.gif"); background-position:center; background-repeat:no-repeat; background-size:contain 50%; height:100px;}
+
+.content-container {width:100%; height:100%; padding:125px 0px 20px; position:absolute; z-index:90; text-align:center; background:#111111;}
+
+.content-container .category {width:100%; border-bottom:5px solid #333333; padding:0px; position:absolute; top:0px; font-family: "opensansbold"}
+.content-container .category .item {margin-bottom:-5px; list-style: none; display:inline-block; padding:5px 20px; cursor:pointer; border-bottom:5px solid transparent;}
+.content-container .category .item:hover, .content-container .category .item.active {border-bottom:5px solid #E5B413; color:#E5B413;}
+
+.content {width:95%; max-width:800px; height:100%; padding-top:34px; position:relative; display:inline-block; border:5px solid #FFFFFF; border-radius:5px; background:#FFFFFF; overflow: hidden;}
+.content .list .item {border:0px solid #E5B413; height:100px; border-bottom:1px groove #EEEEEE; position:relative; cursor: pointer; }
+.content .list .item:hover {background:#333333; border-left:30px solid #E5B413; border-right:30px solid #E5B413;}
+.content .list .item:hover li span {color:#DDDDDD;}
+.content .list .item:hover .id {color:#282828;}
+.content .list .item .id {position:absolute; top:0px; left:10px; font-family:'opensansbold'; font-size:70px; color:#F6F6F6; z-index:0;}
+.content .list .item .label {font-family:'opensansbold'; font-size:1.2em; color:#E5B413; padding: 10px 50px; position:relative; z-index:1;}
+.content .list .item li {list-style: none; position:relative; z-index:1;}
+.content .list .item li .key{font-weight: bold; margin-right:0.5em;}
+
+.content .detail {position:absolute; top:0px; width:100%; height:100%; background:#FFFFFF; z-index:100; border-radius:5px; box-shadow:5px 5px 5px #AAAAAA;}
+.content .detail.hidden {top:-120%;}
+.content .detail .header {font-family:'opensansbold'; font-size:0.8em; position:relative; width:100%; padding:8px; background:#333333; color:#FFFFFF; border-radius:5px 5px 0px 0px;}
+.content .detail .header .closebutton {padding:8px 20px; position:absolute; right:0px; top:0px; background:#E5B413; border-radius:0px 5px 0px 0px; color:#333333; cursor:pointer;}
+.content .detail .header .closebutton:hover {border-left:10px solid #FFFFFF; color:#FFFFFF;}
+
+.content .detail .container {height:100%; width:100%; padding:0px 50px; overflow:scroll;}
+.content .detail .container .label {font-family:'opensansbold'; font-size:2em; color:#E5B413; padding: 20px 50px 0px; position:relative; z-index:1;}
+.content .detail .container ul {margin-top:20px;}
+.content .detail .container ul li {list-style: none;}
+.content .detail .container ul li .key{font-weight: bold; margin-right:0.5em; margin-bottom:3px;}
+
+.content .detail .container ul.ref li {margin-top:10px;}
+.content .detail .container ul.ref li .val {display: inline-block; cursor:pointer; padding:0px 10px; border-left:0px solid #E5B413; border-right:0px solid #E5B413;}
+.content .detail .container ul.ref li .val:hover {border-left:20px solid #E5B413; border-right:20px solid #E5B413; background:#333333; color:#FFFFFF;}
+
+@media screen and (max-width: 600px) {
+    .content-container .category .item {display:block;}
+    .content-container .category .item:hover, .content-container .category .item.active {border-bottom:5px solid #000000; background:#E5B413; color:#FFFFFF;}
+    .content {padding-top:180px;}
+}

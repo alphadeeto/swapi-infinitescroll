@@ -1,0 +1,162 @@
+var attrmap = {
+  people: {
+    identifier:"name",
+    simpleinfo:[
+      "gender",
+      "birth_year",
+    ],
+    maininfo:[
+      "height",
+      "mass",
+      "hair_color",
+      "skin_color",
+      "eye_color",
+    ],
+    reference:[
+      "homeworld",
+      "films",
+      "species",
+      "vehicles",
+      "starships",
+    ],
+    props:[
+      "created",
+      "edited",
+      "url",
+    ]
+  },
+
+  planets: {
+    identifier:"name",
+    simpleinfo:[
+      "diameter",
+      "population",
+    ],
+    maininfo:[
+      "rotation_period",
+      "orbital_period",
+      "climate",
+      "gravity",
+      "terrain",
+      "surface_water",
+    ],
+    reference:[
+      "residents",
+      "films",
+    ],
+    props:[
+      "created",
+      "edited",
+      "url",
+    ]
+  },
+
+  starships: {
+    identifier:"name",
+    simpleinfo:[
+      "model",
+      "manufacturer",
+    ],
+    maininfo:[
+      "cost_in_credits",
+      "length",
+      "max_atmosphering_speed",
+      "crew",
+      "passengers",
+      "cargo_capacity",
+      "consumables",
+      "hyperdrive_rating",
+      "MGLT",
+      "starship_class",
+    ],
+    reference:[
+      "pilots",
+      "films",
+    ],
+    props:[
+      "created",
+      "edited",
+      "url",
+    ]
+  },
+
+  vehicles: {
+    identifier:"name",
+    simpleinfo:[
+      "model",
+      "manufacturer",
+    ],
+    maininfo:[
+      "cost_in_credits",
+      "length",
+      "max_atmosphering_speed",
+      "crew",
+      "passengers",
+      "cargo_capacity",
+      "consumables",
+      "vehicle_class",
+    ],
+    reference:[
+      "pilots",
+      "films",
+    ],
+    props:[
+      "created",
+      "edited",
+      "url",
+    ]
+  },
+
+  films: {
+    identifier:"title",
+    simpleinfo:[
+      "director",
+      "producer",
+    ],
+    maininfo:[
+      "episode_id",
+      "opening_crawl",
+      "release_date",
+    ],
+    reference:[
+      "characters",
+      "planets",
+      "starships",
+      "vehicles",
+      "species",
+    ],
+    props:[
+      "created",
+      "edited",
+      "url",
+    ]
+  },
+
+  species: {
+    identifier:"name",
+    simpleinfo:[
+      "classification",
+      "designation",
+    ],
+    maininfo:[
+      "average_height",
+      "skin_colors",
+      "hair_colors",
+      "eye_colors",
+      "average_lifespan",
+    ],
+    reference:[
+      "homeworld",
+      "language",
+      "people",
+      "films",
+    ],
+    props:[
+      "created",
+      "edited",
+      "url",
+    ]
+  },
+}
+
+export {attrmap as attrmap}
